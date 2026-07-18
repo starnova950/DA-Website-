@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+background-color {}
+body { 
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-rows: auto auto 1fr auto;
+  grid-gap: 2em;
+background:#5C4F4A;
+  
+}
+tools {
+     display: flex;
+  justify-self: right;
+  grid-row: 1/ span 1;
+  grid-column: 2 / span 1;
+  background: #5C766D;
+  padding: 1em;
+
+
+}
+title {
+   display: flex;
+  justify-self: left;
+  grid-row: 2/ span 1;
+  grid-column: 1 / span 2;
+  background: #C9996B;
+  padding: 1em;
+
+}
+main {
+  position: relative;
+  
+  grid-row: 3/ span 1;
+  grid-column: 2 / span 1;
+  background: #EDE9E6;
+ width: 100%;
+  height: 100%;}
+  
+.draggable {
+  position: absolute;   /* lets JS control position */
+  cursor: grab;
+
+  user-select: none;    /* prevents text highlighting */
+  touch-action: none;   /* better behavior on touch devices */
+
+  transition: transform 0.2s ease; /* smooth rotation */
+}
+
+.draggable:active {
+  cursor: grabbing;
+  transition: none; /* removes lag while dragging */
+  
+}
+
+.draggable {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.draggable:active {
+  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+}
+
+
+nav {
+  display: block;
+  overflow: hidden; 
+  justify-self: left;
+  grid-row: 3/ span 2;
+  grid-column: 1 / span 1;
+  background: #5C766D;
+  padding: 1em;
+  
+}
+
+  
